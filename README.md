@@ -1,6 +1,6 @@
 # UnICORNN
 This repository contains the implementation to reproduce the numerical experiments 
-of the paper **UnICORNN: A recurrent model for learning *very* long time dependencies**
+of the paper [UnICORNN: A recurrent model for learning very long time dependencies](https://arxiv.org/abs/2103.05487)
 
 
 
