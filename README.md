@@ -1,6 +1,7 @@
-# UnICORNN
+<h1 align='center'> UnICORNN <br>(Undamped Independent Controlled Oscillatory RNN) <br> [ICML 2021] </h1>
+
 This repository contains the implementation to reproduce the numerical experiments 
-of the paper **UnICORNN: A recurrent model for learning *very* long time dependencies**
+of the **ICML 2021** paper [UnICORNN: A recurrent model for learning very long time dependencies](http://proceedings.mlr.press/v139/rusch21a.html)
 
 
 
@@ -16,6 +17,16 @@ torchtext 0.6.0
 numpy 1.17.3
 spacy 2.3.2
 ```
+
+## Speed
+
+The recurrent part of UnICORNN is directly implemented in pure CUDA (as a PyTorch extension to the remaining standard PyTorch code), where each dimension of the underlying dynamical system is computed on an independent CUDA thread.
+This leads to an amazing speed-up over using PyTorch on GPUs directly (depending on the data set around 30-50 times faster). 
+Below is a speed comparison of our UnICORNN implementation to the fastest RNN implementations you can find (the set-up of this benchmark can be found in the main paper):
+
+<p align="center">
+<img align="middle" src="./imgs/speed.pdf" width="666" />
+</p>
 
 
 ## Datasets
@@ -62,5 +73,20 @@ The results of the UnICORNN for each of the experiments are:
   </tr>
 </table>
 
+
+## Citation
+
+```bibtex
+@inproceedings{pmlr-v139-rusch21a,
+  title = 	 {UnICORNN: A recurrent model for learning very long time dependencies},
+  author =       {Rusch, T. Konstantin and Mishra, Siddhartha},
+  booktitle = 	 {Proceedings of the 38th International Conference on Machine Learning},
+  pages = 	 {9168--9178},
+  year = 	 {2021},
+  volume = 	 {139},
+  series = 	 {Proceedings of Machine Learning Research},
+  publisher =    {PMLR},
+}
+```
 
 
