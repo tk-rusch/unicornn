@@ -25,7 +25,7 @@ This leads to an amazing speed-up over using PyTorch on GPUs directly (depending
 Below is a speed comparison of our UnICORNN implementation to the fastest RNN implementations you can find (the set-up of this benchmark can be found in the main paper):
 
 <p align="center">
-<img align="middle" src="./imgs/speed.pdf" width="666" />
+<img align="middle" src="./imgs/speed.png" width="500" />
 </p>
 
 
