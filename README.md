@@ -75,7 +75,7 @@ The results of the UnICORNN for each of the experiments are:
 
 
 ## Citation
-
+If you found this work useful, please consider citing
 ```bibtex
 @inproceedings{pmlr-v139-rusch21a,
   title = 	 {UnICORNN: A recurrent model for learning very long time dependencies},
