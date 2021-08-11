@@ -18,6 +18,9 @@ numpy 1.17.3
 spacy 2.3.2
 ```
 
+**Comment:** If you are using ```cupy 9.0.0+``` you can compile the CUDA extension (i.e. UnICORNN_CODE in *network.py*) directly with ```cupy.RawModule```, which makes the use of ```pynvrtc``` obsolet, by simply writing ```mod = cupy.RawModule(code=UnICORNN_CODE, options=('--std=c++11',),
+        name_expressions=('unicornn_fwd', 'unicornn_bwd'))``` and deleting the ```pynvrtc``` parts in the class ```UnICORNN_compile()```.
+
 ## Speed
 
 The recurrent part of UnICORNN is directly implemented in pure CUDA (as a PyTorch extension to the remaining standard PyTorch code), where each dimension of the underlying dynamical system is computed on an independent CUDA thread.
