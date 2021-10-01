@@ -82,7 +82,7 @@ If you found this work useful, please consider citing
 ```bibtex
 @inproceedings{pmlr-v139-rusch21a,
   title = 	 {UnICORNN: A recurrent model for learning very long time dependencies},
-  author =       {Rusch, T. Konstantin and Mishra, Siddhartha},
+  author =       {Rusch, T Konstantin and Mishra, Siddhartha},
   booktitle = 	 {Proceedings of the 38th International Conference on Machine Learning},
   pages = 	 {9168--9178},
   year = 	 {2021},
